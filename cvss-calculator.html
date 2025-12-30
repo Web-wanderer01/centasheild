@@ -1,0 +1,203 @@
+<!-- cvss-calculator.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVSS Calculator | VulnAssess</title>
+    <link rel="stylesheet" href="cvss-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Vuln<span>Assess</span></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#tools" class="nav-link">Tools</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#features" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="cvss-calculator">
+            <h1><i class="fas fa-calculator"></i> CVSS Calculator</h1>
+            <p class="subtitle">Calculate CVSS scores for security vulnerabilities</p>
+            
+            <div class="calculator-container">
+                <div class="input-section">
+                    <h2>Vulnerability Details</h2>
+                    <form id="cvssForm">
+                        <div class="form-group">
+                            <label for="attackVector">Attack Vector (AV)</label>
+                            <select id="attackVector" name="attackVector" required>
+                                <option value="">Select Attack Vector</option>
+                                <option value="NETWORK">Network (N)</option>
+                                <option value="ADJACENT">Adjacent Network (A)</option>
+                                <option value="LOCAL">Local (L)</option>
+                                <option value="PHYSICAL">Physical (P)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="attackComplexity">Attack Complexity (AC)</label>
+                            <select id="attackComplexity" name="attackComplexity" required>
+                                <option value="">Select Attack Complexity</option>
+                                <option value="LOW">Low (L)</option>
+                                <option value="HIGH">High (H)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="privilegesRequired">Privileges Required (PR)</label>
+                            <select id="privilegesRequired" name="privilegesRequired" required>
+                                <option value="">Select Privileges Required</option>
+                                <option value="NONE">None (N)</option>
+                                <option value="LOW">Low (L)</option>
+                                <option value="HIGH">High (H)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="userInteraction">User Interaction (UI)</label>
+                            <select id="userInteraction" name="userInteraction" required>
+                                <option value="">Select User Interaction</option>
+                                <option value="NONE">None (N)</option>
+                                <option value="REQUIRED">Required (R)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="scope">Scope (S)</label>
+                            <select id="scope" name="scope" required>
+                                <option value="">Select Scope</option>
+                                <option value="UNCHANGED">Unchanged (U)</option>
+                                <option value="CHANGED">Changed (C)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confidentiality">Confidentiality Impact (C)</label>
+                            <select id="confidentiality" name="confidentiality" required>
+                                <option value="">Select Confidentiality Impact</option>
+                                <option value="NONE">None (N)</option>
+                                <option value="LOW">Low (L)</option>
+                                <option value="HIGH">High (H)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="integrity">Integrity Impact (I)</label>
+                            <select id="integrity" name="integrity" required>
+                                <option value="">Select Integrity Impact</option>
+                                <option value="NONE">None (N)</option>
+                                <option value="LOW">Low (L)</option>
+                                <option value="HIGH">High (H)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="availability">Availability Impact (A)</label>
+                            <select id="availability" name="availability" required>
+                                <option value="">Select Availability Impact</option>
+                                <option value="NONE">None (N)</option>
+                                <option value="LOW">Low (L)</option>
+                                <option value="HIGH">High (H)</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="calculate-btn">
+                            <i class="fas fa-calculator"></i> Calculate CVSS Score
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="result-section">
+                    <h2>CVSS Score Result</h2>
+                    <div id="resultContainer" class="result-container">
+                        <div class="result-placeholder">
+                            <i class="fas fa-info-circle"></i>
+                            <p>Enter vulnerability details and click calculate</p>
+                        </div>
+                        <div id="resultContent" class="result-content" style="display: none;">
+                            <div class="score-display">
+                                <div class="score-value" id="cvssScore">0.0</div>
+                                <div class="score-label">CVSS Score</div>
+                            </div>
+                            <div class="severity-level" id="severityLevel">None</div>
+                            <div class="impact-details">
+                                <h3>Impact Metrics</h3>
+                                <div class="impact-item">
+                                    <span>Base Score:</span>
+                                    <span id="baseScore">0.0</span>
+                                </div>
+                                <div class="impact-item">
+                                    <span>Exploitability:</span>
+                                    <span id="exploitability">0.0</span>
+                                </div>
+                                <div class="impact-item">
+                                    <span>Impact:</span>
+                                    <span id="impact">0.0</span>
+                                </div>
+                            </div>
+                            <div class="description" id="description">
+                                <!-- Description will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Vuln<span>Assess</span></h2>
+                <p>Advanced Vulnerability Assessment Solutions</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#tools">Tools</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 VulnAssess. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="cvss-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!-- firewall.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firewall Protection | VulnAssess</title>
+    <link rel="stylesheet" href="firewall-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Vuln<span>Assess</span></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#tools" class="nav-link">Tools</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#features" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="firewall">
+            <h1><i class="fas fa-shield-alt"></i> Firewall Protection</h1>
+            <p class="subtitle">Advanced network security with real-time monitoring</p>
+            
+            <div class="firewall-overview">
+                <div class="overview-content">
+                    <h2>Enterprise-Grade Firewall Solutions</h2>
+                    <p>Our advanced firewall protection provides comprehensive network security with real-time threat detection and mitigation. Protect your infrastructure from unauthorized access and malicious attacks with our intelligent firewall system.</p>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-globe"></i>
+                            <h3>Network Protection</h3>
+                            <p>Secure your network infrastructure with advanced filtering rules</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-bug"></i>
+                            <h3>Threat Detection</h3>
+                            <p>Identify and block malicious traffic in real-time</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-sync-alt"></i>
+                            <h3>Automatic Updates</h3>
+                            <p>Stay protected with real-time security updates</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Monitoring</h3>
+                            <p>Comprehensive network traffic monitoring and analytics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-image">
+                    <div class="firewall-diagram">
+                        <div class="firewall-layer">
+                            <div class="layer-title">External Network</div>
+                            <div class="layer-content">
+                                <div class="traffic">Traffic In</div>
+                            </div>
+                        </div>
+                        <div class="firewall-layer">
+                            <div class="layer-title">Firewall</div>
+                            <div class="layer-content">
+                                <div class="firewall-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="firewall-layer">
+                            <div class="layer-title">Internal Network</div>
+                            <div class="layer-content">
+                                <div class="traffic">Traffic Out</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="firewall-config">
+                <h2>Firewall Configuration</h2>
+                <div class="config-container">
+                    <div class="config-form">
+                        <div class="form-group">
+                            <label for="firewallMode">Firewall Mode</label>
+                            <select id="firewallMode">
+                                <option>Protective</option>
+                                <option>Monitoring</option>
+                                <option>Transparent</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="blockRules">Block Rules</label>
+                            <textarea id="blockRules" rows="5">Block all traffic from IP ranges 192.168.1.0/24
+Block all incoming connections on port 23
+Block traffic from known malicious IPs</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="allowRules">Allow Rules</label>
+                            <textarea id="allowRules" rows="5">Allow HTTP traffic on port 80
+Allow HTTPS traffic on port 443
+Allow SSH traffic on port 22</textarea>
+                        </div>
+                        <button class="btn-primary">Apply Configuration</button>
+                    </div>
+                    <div class="config-status">
+                        <h3>Current Status</h3>
+                        <div class="status-item">
+                            <span>Firewall Status:</span>
+                            <span class="status active">Active</span>
+                        </div>
+                        <div class="status-item">
+                            <span>Last Update:</span>
+                            <span>2023-06-15 14:30:22</span>
+                        </div>
+                        <div class="status-item">
+                            <span>Rules Applied:</span>
+                            <span>12</span>
+                        </div>
+                        <div class="status-item">
+                            <span>Blocked Connections:</span>
+                            <span>42</span>
+                        </div>
+                        <div class="status-item">
+                            <span>Active Threats:</span>
+                            <span class="status critical">3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="firewall-features">
+                <h2>Advanced Firewall Features</h2>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Application Control</h3>
+                            <p>Control which applications can access your network and what resources they can use.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Network Segmentation</h3>
+                            <p>Isolate critical systems and limit lateral movement of threats.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Encryption</h3>
+                            <p>Secure data in transit with advanced encryption protocols.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Alerts & Notifications</h3>
+                            <p>Receive real-time alerts for suspicious activities and security events.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Vuln<span>Assess</span></h2>
+                <p>Advanced Vulnerability Assessment Solutions</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#tools">Tools</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 VulnAssess. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="firewall-script.js"></script>
+</body>
+</html>

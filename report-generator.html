@@ -1,0 +1,175 @@
+<!-- report-generator.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Generator | VulnAssess</title>
+    <link rel="stylesheet" href="report-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Vuln<span>Assess</span></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#tools" class="nav-link">Tools</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#features" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="report-generator">
+            <h1><i class="fas fa-file-alt"></i> Vulnerability Report Generator</h1>
+            <p class="subtitle">Generate comprehensive vulnerability assessment reports</p>
+            
+            <div class="generator-container">
+                <div class="input-section">
+                    <h2>Report Parameters</h2>
+                    <form id="reportForm">
+                        <div class="form-group">
+                            <label for="reportType">Report Type</label>
+                            <select id="reportType" name="reportType" required>
+                                <option value="">Select Report Type</option>
+                                <option value="executive">Executive Summary</option>
+                                <option value="technical">Technical Assessment</option>
+                                <option value="compliance">Compliance Report</option>
+                                <option value="custom">Custom Report</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="targetSystem">Target System</label>
+                            <input type="text" id="targetSystem" name="targetSystem" placeholder="System name or IP address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="startDate">Start Date</label>
+                            <input type="date" id="startDate" name="startDate" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="endDate">End Date</label>
+                            <input type="date" id="endDate" name="endDate" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reportFormat">Report Format</label>
+                            <select id="reportFormat" name="reportFormat" required>
+                                <option value="">Select Format</option>
+                                <option value="pdf">PDF</option>
+                                <option value="docx">Word Document</option>
+                                <option value="html">HTML</option>
+                                <option value="csv">CSV</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="includeDetails">Include Detailed Analysis</label>
+                            <input type="checkbox" id="includeDetails" name="includeDetails">
+                            <label for="includeDetails">Yes, include vulnerability details</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="includeRecommendations">Include Remediation Recommendations</label>
+                            <input type="checkbox" id="includeRecommendations" name="includeRecommendations" checked>
+                            <label for="includeRecommendations">Yes, include remediation steps</label>
+                        </div>
+                        
+                        <button type="submit" class="generate-btn">
+                            <i class="fas fa-file-export"></i> Generate Report
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="preview-section">
+                    <h2>Report Preview</h2>
+                    <div id="previewContainer" class="preview-container">
+                        <div class="preview-placeholder">
+                            <i class="fas fa-file-alt"></i>
+                            <p>Generate a report to see preview</p>
+                        </div>
+                        <div id="previewContent" class="preview-content" style="display: none;">
+                            <div class="report-header">
+                                <h3 id="previewTitle">Vulnerability Assessment Report</h3>
+                                <p id="previewSystem">Target System: <span>Unknown</span></p>
+                                <p id="previewDates">Period: <span>Unknown</span></p>
+                            </div>
+                            <div class="report-summary">
+                                <h4>Executive Summary</h4>
+                                <p id="previewSummary">This report provides a comprehensive analysis of vulnerabilities found in the target system during the specified period.</p>
+                            </div>
+                            <div class="report-details">
+                                <h4>Vulnerability Details</h4>
+                                <div id="previewVulnerabilities">
+                                    <p>No vulnerabilities to display</p>
+                                </div>
+                            </div>
+                            <div class="report-recommendations">
+                                <h4>Recommendations</h4>
+                                <p id="previewRecommendations">Based on the findings, the following recommendations are provided:</p>
+                                <ul>
+                                    <li>Update all systems to the latest security patches</li>
+                                    <li>Implement network segmentation</li>
+                                    <li>Conduct regular vulnerability assessments</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Vuln<span>Assess</span></h2>
+                <p>Advanced Vulnerability Assessment Solutions</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#tools">Tools</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 VulnAssess. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="report-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!-- security-dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Dashboard | VulnAssess</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Vuln<span>Assess</span></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#tools" class="nav-link">Tools</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#features" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="dashboard">
+            <h1><i class="fas fa-chart-bar"></i> Security Dashboard</h1>
+            <p class="subtitle">Monitor security metrics and trends in real-time</p>
+            
+            <div class="dashboard-controls">
+                <div class="time-filter">
+                    <label for="timeRange">Time Range:</label>
+                    <select id="timeRange">
+                        <option value="7">Last 7 Days</option>
+                        <option value="30" selected>Last 30 Days</option>
+                        <option value="90">Last 90 Days</option>
+                        <option value="365">Last Year</option>
+                    </select>
+                </div>
+                <div class="refresh-btn">
+                    <button id="refreshBtn"><i class="fas fa-sync-alt"></i> Refresh Data</button>
+                </div>
+            </div>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <h3>Total Vulnerabilities</h3>
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="metric-value">142</div>
+                    <div class="metric-trend">
+                        <i class="fas fa-arrow-up"></i> 12% from last period
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <h3>Critical Issues</h3>
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="metric-value">12</div>
+                    <div class="metric-trend">
+                        <i class="fas fa-arrow-down"></i> 5% from last period
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <h3>High Severity</h3>
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="metric-value">34</div>
+                    <div class="metric-trend">
+                        <i class="fas fa-arrow-up"></i> 8% from last period
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <h3>Medium Severity</h3>
+                        <i class="fas fa-exclamation"></i>
+                    </div>
+                    <div class="metric-value">68</div>
+                    <div class="metric-trend">
+                        <i class="fas fa-arrow-down"></i> 3% from last period
+                    </div>
+                </div>
+            </div>
+            
+            <div class="charts-container">
+                <div class="chart-section">
+                    <h2>Vulnerability Trends</h2>
+                    <div class="chart-placeholder">
+                        <i class="fas fa-chart-line"></i>
+                        <p>Vulnerability trend chart will appear here</p>
+                    </div>
+                </div>
+                
+                <div class="chart-section">
+                    <h2>Severity Distribution</h2>
+                    <div class="chart-placeholder">
+                        <i class="fas fa-chart-pie"></i>
+                        <p>Severity distribution chart will appear here</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recent-alerts">
+                <h2>Recent Security Alerts</h2>
+                <div class="alerts-list">
+                    <div class="alert-item">
+                        <div class="alert-header">
+                            <span class="alert-severity critical">Critical</span>
+                            <span class="alert-time">2 hours ago</span>
+                        </div>
+                        <h3>Remote Code Execution Vulnerability Found</h3>
+                        <p>Detected in web application server. Immediate patching required.</p>
+                    </div>
+                    
+                    <div class="alert-item">
+                        <div class="alert-header">
+                            <span class="alert-severity high">High</span>
+                            <span class="alert-time">5 hours ago</span>
+                        </div>
+                        <h3>SQL Injection Vulnerability</h3>
+                        <p>Detected in database interface. Review access controls.</p>
+                    </div>
+                    
+                    <div class="alert-item">
+                        <div class="alert-header">
+                            <span class="alert-severity medium">Medium</span>
+                            <span class="alert-time">1 day ago</span>
+                        </div>
+                        <h3>Outdated Software Detected</h3>
+                        <p>Apache version 2.4.29 detected. Update to latest version.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Vuln<span>Assess</span></h2>
+                <p>Advanced Vulnerability Assessment Solutions</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#tools">Tools</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 VulnAssess. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="dashboard-script.js"></script>
+</body>
+</html>

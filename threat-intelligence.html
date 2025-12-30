@@ -1,0 +1,280 @@
+<!-- threat-intelligence.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threat Intelligence | VulnAssess</title>
+    <link rel="stylesheet" href="threat-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Vuln<span>Assess</span></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#tools" class="nav-link">Tools</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#features" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="threat-intelligence">
+            <h1><i class="fas fa-shield-virus"></i> Threat Intelligence</h1>
+            <p class="subtitle">Monitor and analyze emerging threats in real-time</p>
+            
+            <div class="dashboard-controls">
+                <div class="time-filter">
+                    <label for="timeRange">Time Range:</label>
+                    <select id="timeRange">
+                        <option value="24">Last 24 Hours</option>
+                        <option value="7" selected>Last 7 Days</option>
+                        <option value="30">Last 30 Days</option>
+                        <option value="90">Last 90 Days</option>
+                    </select>
+                </div>
+                <div class="refresh-btn">
+                    <button id="refreshBtn"><i class="fas fa-sync-alt"></i> Refresh Data</button>
+                </div>
+            </div>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <h3>Active Threats</h3>
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="metric-value">24</div>
+                    <div class="metric-trend">
+                        <i class="fas fa-arrow-up"></i> 3 new today
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <h3>Malware Detected</h3>
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <div class="metric-value">18</div>
+                    <div class="metric-trend">
+                        <i class="fas fa-arrow-down"></i> 2 less than yesterday
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <h3>Phishing Attempts</h3>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="metric-value">42</div>
+                    <div class="metric-trend">
+                        <i class="fas fa-arrow-up"></i> 7 more than yesterday
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <h3>Threat Severity</h3>
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="metric-value">High</div>
+                    <div class="metric-trend">
+                        <i class="fas fa-exclamation"></i> 12 critical alerts
+                    </div>
+                </div>
+            </div>
+            
+            <div class="threats-container">
+                <div class="threat-section">
+                    <h2>Recent Threats</h2>
+                    <div class="threats-list">
+                        <div class="threat-item">
+                            <div class="threat-header">
+                                <span class="threat-severity critical">Critical</span>
+                                <span class="threat-time">2 hours ago</span>
+                            </div>
+                            <h3>Zero-day Exploit in Microsoft Office</h3>
+                            <p>Attackers are actively exploiting a previously unknown vulnerability in Microsoft Office. Immediate patching required.</p>
+                            <div class="threat-details">
+                                <span><i class="fas fa-tag"></i> CVE-2023-XXXXX</span>
+                                <span><i class="fas fa-globe"></i> Global</span>
+                                <span><i class="fas fa-shield-alt"></i> Mitigation: Disable macros</span>
+                            </div>
+                            <div class="threat-links">
+                                <a href="https://www.cve.org/CVERecord?id=CVE-2023-XXXXX" target="_blank" class="btn-link">
+                                    <i class="fas fa-external-link-alt"></i> CVE Details
+                                </a>
+                                <a href="https://www.microsoft.com/en-us/security/why-microsoft-security" target="_blank" class="btn-link">
+                                    <i class="fas fa-external-link-alt"></i> Microsoft Advisory
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="threat-item">
+                            <div class="threat-header">
+                                <span class="threat-severity high">High</span>
+                                <span class="threat-time">5 hours ago</span>
+                            </div>
+                            <h3>Ransomware Campaign Targeting Healthcare</h3>
+                            <p>New ransomware variant targeting healthcare organizations with double extortion tactics.</p>
+                            <div class="threat-details">
+                                <span><i class="fas fa-tag"></i> Ransomware: Medusa</span>
+                                <span><i class="fas fa-globe"></i> Regional</span>
+                                <span><i class="fas fa-shield-alt"></i> Mitigation: Network segmentation</span>
+                            </div>
+                            <div class="threat-links">
+                                <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-320a" target="_blank" class="btn-link">
+                                    <i class="fas fa-external-link-alt"></i> CISA Advisory
+                                </a>
+                                <a href="https://www.nomoreransom.org/" target="_blank" class="btn-link">
+                                    <i class="fas fa-external-link-alt"></i> No More Ransom
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="threat-item">
+                            <div class="threat-header">
+                                <span class="threat-severity medium">Medium</span>
+                                <span class="threat-time">1 day ago</span>
+                            </div>
+                            <h3>DDoS Attack Pattern</h3>
+                            <p>Increased DDoS attack activity targeting web applications with amplification techniques.</p>
+                            <div class="threat-details">
+                                <span><i class="fas fa-tag"></i> DDoS: Amplification</span>
+                                <span><i class="fas fa-globe"></i> Regional</span>
+                                <span><i class="fas fa-shield-alt"></i> Mitigation: Rate limiting</span>
+                            </div>
+                            <div class="threat-links">
+                                <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-144a" target="_blank" class="btn-link">
+                                    <i class="fas fa-external-link-alt"></i> CISA DDoS Advisory
+                                </a>
+                                <a href="https://www.akamai.com/" target="_blank" class="btn-link">
+                                    <i class="fas fa-external-link-alt"></i> Akamai DDoS Reports
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="threat-section">
+                    <h2>Threat Intelligence Resources</h2>
+                    <div class="feed-container">
+                        <div class="feed-item">
+                            <h3>MITRE ATT&CK Framework</h3>
+                            <p>Latest techniques and procedures used by adversaries</p>
+                            <a href="https://attack.mitre.org/" target="_blank" class="feed-link">
+                                <i class="fas fa-external-link-alt"></i> View MITRE ATT&CK
+                            </a>
+                        </div>
+                        <div class="feed-item">
+                            <h3>IOC Database</h3>
+                            <p>Indicators of compromise for known threats</p>
+                            <a href="https://www.virustotal.com/" target="_blank" class="feed-link">
+                                <i class="fas fa-external-link-alt"></i> VirusTotal IOC Search
+                            </a>
+                        </div>
+                        <div class="feed-item">
+                            <h3>APT Reports</h3>
+                            <p>Advanced Persistent Threat group activities</p>
+                            <a href="https://www.fireeye.com/current-threats/apt-reports.html" target="_blank" class="feed-link">
+                                <i class="fas fa-external-link-alt"></i> FireEye APT Reports
+                            </a>
+                        </div>
+                        <div class="feed-item">
+                            <h3>Threat Actor Profiles</h3>
+                            <p>Information about known threat actors and their tactics</p>
+                            <a href="https://www.cisa.gov/threat-actor-profiles" target="_blank" class="feed-link">
+                                <i class="fas fa-external-link-alt"></i> CISA Threat Actors
+                            </a>
+                        </div>
+                        <div class="feed-item">
+                            <h3>Security News Feeds</h3>
+                            <p>Latest cybersecurity news and threat intelligence</p>
+                            <a href="https://krebsonsecurity.com/" target="_blank" class="feed-link">
+                                <i class="fas fa-external-link-alt"></i> Krebs on Security
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="threat-analysis">
+                <h2>Threat Analysis</h2>
+                <div class="analysis-content">
+                    <div class="analysis-chart">
+                        <div class="chart-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                            <p>Threat trend analysis chart</p>
+                        </div>
+                    </div>
+                    <div class="analysis-summary">
+                        <h3>Threat Landscape Summary</h3>
+                        <p>Our threat intelligence system has identified a 15% increase in targeted attacks over the past week. The most significant threats include zero-day exploits, ransomware campaigns, and supply chain attacks.</p>
+                        <p>Organizations should prioritize patch management for critical vulnerabilities and implement multi-layered security controls to mitigate these threats effectively.</p>
+                        <div class="analysis-actions">
+                            <h4>Recommended Actions:</h4>
+                            <ul>
+                                <li>Update all systems with latest security patches</li>
+                                <li>Implement network segmentation</li>
+                                <li>Train staff on phishing awareness</li>
+                                <li>Review and update incident response plans</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Vuln<span>Assess</span></h2>
+                <p>Advanced Vulnerability Assessment Solutions</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#tools">Tools</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 VulnAssess. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="threat-script.js"></script>
+</body>
+</html>

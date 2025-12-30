@@ -1,0 +1,153 @@
+<!-- wireshark.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Monitor | VulnAssess</title>
+    <link rel="stylesheet" href="wireshark-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Vuln<span>Assess</span></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#tools" class="nav-link">Tools</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#features" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="wireshark-app">
+            <h1><i class="fas fa-network-wired"></i> Network Monitor</h1>
+            <p class="subtitle">Real-time packet capture and analysis</p>
+            
+            <div class="controls">
+                <div class="control-group">
+                    <label for="interface">Interface:</label>
+                    <select id="interface">
+                        <option>eth0</option>
+                        <option>wlan0</option>
+                        <option>lo</option>
+                        <option>docker0</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="filter">Display Filter:</label>
+                    <input type="text" id="filter" placeholder="e.g., tcp.port == 80">
+                </div>
+                <div class="control-group">
+                    <button id="startBtn" class="btn-primary"><i class="fas fa-play"></i> Start Capture</button>
+                    <button id="stopBtn" class="btn-secondary"><i class="fas fa-stop"></i> Stop Capture</button>
+                    <button id="saveBtn" class="btn-secondary"><i class="fas fa-save"></i> Save Capture</button>
+                </div>
+            </div>
+            
+            <div class="monitoring-area">
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <i class="fas fa-bolt"></i>
+                        <span id="packetsCount">0</span> packets
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-database"></i>
+                        <span id="bytesCount">0</span> bytes
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span id="threatsCount">0</span> threats detected
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-sync-alt"></i>
+                        <span id="status">Idle</span>
+                    </div>
+                </div>
+                
+                <div class="packet-table">
+                    <div class="table-header">
+                        <div class="header-cell">No.</div>
+                        <div class="header-cell">Time</div>
+                        <div class="header-cell">Source</div>
+                        <div class="header-cell">Destination</div>
+                        <div class="header-cell">Protocol</div>
+                        <div class="header-cell">Length</div>
+                        <div class="header-cell">Info</div>
+                    </div>
+                    <div id="packetsContainer" class="table-body">
+                        <!-- Packets will be added here dynamically -->
+                    </div>
+                </div>
+                
+                <div class="packet-details">
+                    <h3>Packet Details</h3>
+                    <div id="packetDetailContent">
+                        <p>Select a packet to view details</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="visualization">
+                <h3>Network Traffic Visualization</h3>
+                <div class="traffic-chart">
+                    <div class="chart-placeholder">
+                        <i class="fas fa-chart-line"></i>
+                        <p>Real-time traffic visualization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Vuln<span>Assess</span></h2>
+                <p>Advanced Vulnerability Assessment Solutions</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#tools">Tools</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 VulnAssess. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="wireshark-script.js"></script>
+</body>
+</html>

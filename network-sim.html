@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Network Traffic Simulator | VulnAssess</title>
+    <link rel="stylesheet" href="network-sim.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">Vuln<span>Assess</span></a>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="index.html#tools" class="nav-link">Tools</a></li>
+            <li><a href="index.html#features" class="nav-link">Features</a></li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <section class="simulator-section">
+        <h1><i class="fas fa-network-wired"></i> Network Traffic Simulator</h1>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value" id="connCount">0</div>
+                <div>Active Connections</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="bandwidth">0 MB/s</div>
+                <div>Bandwidth Usage</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="threats">0</div>
+                <div>Threats Detected</div>
+            </div>
+        </div>
+        <div id="logContainer" aria-live="polite" class="log-container">
+            <p>Starting simulation...</p>
+        </div>
+        <div class="buttons">
+            <button id="startBtn"><i class="fas fa-play"></i> Start Simulation</button>
+            <button id="stopBtn" disabled><i class="fas fa-stop"></i> Stop Simulation</button>
+        </div>
+    </section>
+
+    <section class="knowledge-section">
+        <h2>Knowledge Base & Reading</h2>
+        <ul>
+            <li><a href="https://www.wireshark.org/" target="_blank" rel="noopener">Wireshark Official Site</a></li>
+            <li><a href="https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/" target="_blank" rel="noopener">Understanding DDoS Attacks</a></li>
+            <li><a href="https://www.sans.org/blog/network-security-basics/" target="_blank" rel="noopener">Network Security Basics (SANS)</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/products/security/firewalls/index.html" target="_blank" rel="noopener">Firewall Basics and Technologies</a></li>
+            <li><a href="https://www.us-cert.gov/ncas/tips" target="_blank" rel="noopener">Cybersecurity Tips & Best Practices</a></li>
+        </ul>
+    </section>
+</main>
+
+<script src="network-sim.js"></script>
+</body>
+</html>
